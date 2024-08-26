@@ -1,0 +1,23 @@
+{
+	"name": "learning-nodejs",
+	"version": "1.0.0",
+	"description": "Learning nodejs from zero",
+	"main": "app.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/21520894/Learing_nodejs.git"
+	},
+	"keywords": [
+		"nodejs",
+		"react"
+	],
+	"author": "Duy Hung",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/21520894/Learing_nodejs/issues"
+	},
+	"homepage": "https://github.com/21520894/Learing_nodejs#readme"
+}
