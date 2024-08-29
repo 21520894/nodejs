@@ -1,10 +1,8 @@
 const express = require ('express');
 const router = express.Router()
 const path = require('path')
+const {getHomePage} = require('../controllers/homeController')
 
-router.get("/html", function (req, res) {
-    console.log (__dirname)
-	res.sendFile(path.join(__dirname,'../views/index.html'))
-});
+router.get("/html", getHomePage);
 
 module.exports = router
