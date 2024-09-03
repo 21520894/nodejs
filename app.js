@@ -6,11 +6,15 @@ const app = express();
 const port = process.env.PORT;
 const hostname = process.env.HOST_NAME;
 const webRoute = require('./src/routes/web')
-const mysql2 = require('mysql2')
+const connection = require('./src/config/database')
+
+app.use (express.json()) // for json
+app.use (express.urlencoded({extended: true}))	// for form data
+
 
 //config template engine
 configViewEngine(app)
-app.use('/test',webRoute)
+app.use('/',webRoute)
 //config static file
 
 
@@ -19,20 +23,4 @@ app.listen(port,hostname,() => {
 	console.log (`example app listening on port ${port}`)
 })
 
-const connection = mysql2.createConnection({
-	host: 'localhost',
-	port: 3307,
-	user: 'root',
-	password: '123456',
-	database: 'NODEJSDB'
-});
-
-connection.query(
-	'SELECT * FROM users',
-	function(err,result,fields){
-		console.log(">>>result = ",result)
-		console.log(">>>>fields = ",fields)
-		//console.log(">>>>err = ",err)
-	}
-);
 
