@@ -1,0 +1,25 @@
+import React from 'react';
+
+class Addcomponent extends React.component
+{
+    state  = {
+        firstname: '',
+        lastname: ''
+    }
+
+    handlesth = (event) => 
+    {
+        this.setState({
+            
+        })
+    }
+    render(){
+        return (
+            {
+                <div>hello my component </div>
+            }
+        )
+    }
+}
+
+expotr default Addcomponent;

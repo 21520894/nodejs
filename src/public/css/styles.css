@@ -44,3 +44,7 @@ button{
     margin: 10px;
     cursor: pointer;
 }
+
+.id-none{
+  display: none;
+}

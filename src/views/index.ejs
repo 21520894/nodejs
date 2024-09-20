@@ -60,8 +60,10 @@
                       <td><%= item.name%></td>
                       <td><%= item.city%></td>
                       <td>
-                        <button>Edit</button>
-                        <button>Delete</button>
+                        <a href="/updateUser/<%= item.id%>">Edit</a>
+                        <form action="/deleteUser/<%= item.id%>" method="post">
+                          <button>Delete</button>
+                        </form>
                       </td>
                     </tr>
                       <% }); %>
